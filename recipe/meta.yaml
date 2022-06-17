@@ -1,5 +1,5 @@
 {% set name = "pycytominer" %}
-{% set version = "0.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
-  sha256: 9f53bc9653e1c7fa4eac8a6b3bc0aa8f544dcd48e0f93f7ad041323e8eb6b1e9
+  sha256: 3f64cc584b50c80bd2141aab9b3acd77dbd1b651f3764b0d2e03bc963484f1bf
 
 build:
   noarch: python
@@ -41,4 +41,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - gwaygenomics
+    - gwaybio

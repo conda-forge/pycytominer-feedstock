@@ -33,19 +33,19 @@ test:
   requires:
     - pip
 
-about:
-  home: https://github.com/cytomining/pycytominer
-  summary: Processing perturbation profiling readouts.
-  license: BSD-3-Clause
-  license_file: LICENSE.md
-
 outputs:
   - name: pycytominer.collate
     version: {{ version }}
     requirements:
       run:
-        - {{ pin_subpackage({{ name|lower }}, exact=True) }}
+        - {{ pin_subpackage('pycytominer', exact=True) }}
         - cytominer-database >= 0.3.4
+
+about:
+  home: https://github.com/cytomining/pycytominer
+  summary: Processing perturbation profiling readouts.
+  license: BSD-3-Clause
+  license_file: LICENSE.md
 
 extra:
   recipe-maintainers:

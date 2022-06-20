@@ -39,6 +39,14 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE.md
 
+outputs:
+  - name: pycytominer.collate
+    version: {{ version }}
+    requirements:
+      run:
+        - {{ pin_subpackage({{ name|lower }}, exact=True) }}
+        - cytominer-database >= 0.3.4
+
 extra:
   recipe-maintainers:
     - gwaybio

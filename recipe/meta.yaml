@@ -36,6 +36,7 @@ outputs:
     version: {{ version }}
     requirements:
       run:
+        - python >=3.4
         - {{ pin_subpackage('pycytominer', exact=True) }}
         - cytominer-database >=0.3.4
 

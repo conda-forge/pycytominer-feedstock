@@ -9,11 +9,6 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
   sha256: 3f64cc584b50c80bd2141aab9b3acd77dbd1b651f3764b0d2e03bc963484f1bf
 
-build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
-
 
 test:
   imports:
@@ -36,6 +31,10 @@ outputs:
         - python >=3.4
         - scikit-learn
         - sqlalchemy
+    build:
+      noarch: python
+      script: {{ PYTHON }} -m pip install . -vv
+      number: 0
   - name: pycytominer.collate
     version: {{ version }}
     requirements:

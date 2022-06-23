@@ -35,7 +35,7 @@ outputs:
     version: {{ version }}
     requirements:
       - {{ pin_subpackage('pycytominer', exact=True) }}
-      - cytominer-database >=0.3.4      
+      - cytominer_database >=0.3.4      
 
 about:
   home: https://github.com/cytomining/pycytominer

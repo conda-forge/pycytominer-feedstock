@@ -15,8 +15,11 @@ requirements:
     - pip
     - python >=3.4
   run:
-      - {{ pin_subpackage('pycytominer', exact=True) }}
-      - {{ pin_subpackage('pycytominer.collate', exact=True) }}
+    - numpy
+    - pandas
+    - python >=3.4
+    - scikit-learn
+    - sqlalchemy
       
 test:
   imports:
@@ -28,26 +31,11 @@ test:
 outputs:
   - name: pycytominer
     version: {{ version }}
-    requirements:
-      run:
-        - numpy
-        - pandas
-        - python >=3.4
-        - scikit-learn
-        - sqlalchemy
   - name: pycytominer.collate
     version: {{ version }}
     requirements:
-      build:
-        - python >=3.4
-        - {{ pin_subpackage('pycytominer', exact=True) }}
-        - cytominer-database >=0.3.4
-      run:
-        - python >=3.4
-        - {{ pin_subpackage('pycytominer', exact=True) }}
-        - cytominer-database >=0.3.4
-
-      
+      - {{ pin_subpackage('pycytominer', exact=True) }}
+      - cytominer-database >=0.3.4      
 
 about:
   home: https://github.com/cytomining/pycytominer

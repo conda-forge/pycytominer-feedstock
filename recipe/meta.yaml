@@ -14,16 +14,6 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
-requirements:
-  host:
-    - pip
-    - python >=3.4
-  run:
-    - numpy
-    - pandas
-    - python >=3.4
-    - scikit-learn
-    - sqlalchemy
 
 test:
   imports:
@@ -34,6 +24,18 @@ test:
     - pip
 
 outputs:
+  - name: pycytominer
+    version: {{ version }}
+    requirements:
+      host:
+        - pip
+        - python >=3.4
+      run:
+        - numpy
+        - pandas
+        - python >=3.4
+        - scikit-learn
+        - sqlalchemy
   - name: pycytominer.collate
     version: {{ version }}
     requirements:

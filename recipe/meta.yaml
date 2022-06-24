@@ -1,8 +1,10 @@
 {% set name = "pycytominer" %}
 {% set version = "0.2.0" %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
+
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
   sha256: 3f64cc584b50c80bd2141aab9b3acd77dbd1b651f3764b0d2e03bc963484f1bf
@@ -10,6 +12,7 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
+
 requirements:
   host:
     - pip
@@ -20,7 +23,7 @@ requirements:
     - python >=3.4
     - scikit-learn
     - sqlalchemy
-      
+  
 test:
   imports:
     - pycytominer
@@ -42,6 +45,7 @@ about:
   summary: Processing perturbation profiling readouts.
   license: BSD-3-Clause
   license_file: LICENSE.md
+  
 extra:
   recipe-maintainers:
     - gwaybio

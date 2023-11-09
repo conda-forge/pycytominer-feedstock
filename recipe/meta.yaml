@@ -1,5 +1,5 @@
 {% set name = "pycytominer" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
-  sha256: 7a82e9a64f37c3bf96ceb498aab425145b7ca9c4332ec1d0e69e1b37ebab837c
+  sha256: af18328fa484ca6a0413c70c0664b6503f117a79a9052c52631f52194bb0a97d
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -67,7 +67,7 @@ outputs:
 
 about:
   home: https://github.com/cytomining/pycytominer
-  summary: Processing perturbation profiling readouts.
+  summary: Python package for processing image-based profiling data
   license: BSD-3-Clause
   license_file: LICENSE.md
 

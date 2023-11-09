@@ -7,7 +7,7 @@ Home: https://github.com/cytomining/pycytominer
 
 Package license: BSD-3-Clause
 
-Summary: Processing perturbation profiling readouts.
+Summary: Python package for processing image-based profiling data
 
 Current build status
 ====================

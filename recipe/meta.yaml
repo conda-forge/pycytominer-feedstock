@@ -50,13 +50,21 @@ outputs:
         - python >=3.8,<4.0
         - {{ pin_subpackage('pycytominer', exact=True) }}
         - cytominer_database >=0.3.4
+    test:
+      requires:
+        - pip
+      imports:
+        - pycytominer
+        - cytominer_database
+      commands:
+        - pip check
   - name: pycytominer.cell-locations
     version: {{ version }}
     build:
       noarch: python
     requirements:
       host:
-        - python >=3.8,<4.0
+        - fire >=0.5.0
       run:
         - python >=3.8,<4.0
         - {{ pin_subpackage('pycytominer', exact=True) }}
@@ -64,6 +72,14 @@ outputs:
         - s3fs >=2023.4.0
         - boto3 >=1.26.79
         - fire >=0.5.0
+    test:
+      requires:
+        - pip
+      imports:
+        - pycytominer
+        - boto3
+      commands:
+        - pip check
 
 about:
   home: https://github.com/cytomining/pycytominer

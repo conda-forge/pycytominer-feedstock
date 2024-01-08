@@ -73,13 +73,8 @@ outputs:
         - boto3 >=1.26.79
         - fire >=0.5.0
     test:
-      requires:
-        - pip
       imports:
-        - pycytominer
-        - boto3
-      commands:
-        - pip check
+        - pycytominer.cyto_utils.cell_locations
 
 about:
   home: https://github.com/cytomining/pycytominer

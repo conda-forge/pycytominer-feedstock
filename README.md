@@ -1,13 +1,13 @@
-About pycytominer
-=================
+About pycytominer-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pycytominer-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/cytomining/pycytominer
 
 Package license: BSD-3-Clause
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pycytominer-feedstock/blob/main/LICENSE.txt)
-
-Summary: Processing perturbation profiling readouts.
+Summary: Python package for processing image-based profiling data
 
 Current build status
 ====================
@@ -28,6 +28,8 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pycytominer-green.svg)](https://anaconda.org/conda-forge/pycytominer) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pycytominer.svg)](https://anaconda.org/conda-forge/pycytominer) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pycytominer.svg)](https://anaconda.org/conda-forge/pycytominer) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pycytominer.svg)](https://anaconda.org/conda-forge/pycytominer) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pycytominer.cell--locations-green.svg)](https://anaconda.org/conda-forge/pycytominer.cell-locations) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pycytominer.cell-locations.svg)](https://anaconda.org/conda-forge/pycytominer.cell-locations) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pycytominer.cell-locations.svg)](https://anaconda.org/conda-forge/pycytominer.cell-locations) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pycytominer.cell-locations.svg)](https://anaconda.org/conda-forge/pycytominer.cell-locations) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pycytominer.collate-green.svg)](https://anaconda.org/conda-forge/pycytominer.collate) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pycytominer.collate.svg)](https://anaconda.org/conda-forge/pycytominer.collate) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pycytominer.collate.svg)](https://anaconda.org/conda-forge/pycytominer.collate) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pycytominer.collate.svg)](https://anaconda.org/conda-forge/pycytominer.collate) |
 
 Installing pycytominer
 ======================
@@ -39,16 +41,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pycytominer` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pycytominer, pycytominer.cell-locations, pycytominer.collate` can be installed with `conda`:
 
 ```
-conda install pycytominer
+conda install pycytominer pycytominer.cell-locations pycytominer.collate
 ```
 
 or with `mamba`:
 
 ```
-mamba install pycytominer
+mamba install pycytominer pycytominer.cell-locations pycytominer.collate
 ```
 
 It is possible to list all of the versions of `pycytominer` available on your platform with `conda`:
@@ -95,7 +97,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance

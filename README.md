@@ -147,5 +147,4 @@ Feedstock Maintainers
 
 * [@gwaybio](https://github.com/gwaybio/)
 * [@kenibrewer](https://github.com/kenibrewer/)
-* [@d33bs](https://github.com/d33bs/)
 

@@ -17,6 +17,7 @@ requirements:
   host:
     - python >=3.8,<3.12
     - pip
+    - setuptools
     - poetry
     - poetry-dynamic-versioning
   run:

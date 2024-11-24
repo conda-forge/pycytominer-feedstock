@@ -1,5 +1,5 @@
 {% set name = "pycytominer" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
-  sha256: 765ee58acefc09cfe81a6f242ec9dc9d7066a2c491317d86b7680e126f6a7f2b
+  sha256: a2b2a1721ec1a40f525fc99a87edadf716dce4faa926b33ba2551f45a13a66ed
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 4
+  number: 0
 
 requirements:
   host:

@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
   sha256: a2b2a1721ec1a40f525fc99a87edadf716dce4faa926b33ba2551f45a13a66ed
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python {{ python_min }}
     - pip
     - setuptools
     - poetry
     - poetry-dynamic-versioning
   run:
-    - python >=3.8,<3.12
+    - python >={{ python_min }},<3.12
     - numpy >=1.16.5
     - scipy >=1.5
     - pandas >=1.2.0
@@ -33,6 +33,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - pycytominer
   commands:
@@ -47,14 +48,15 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.8,<3.12
+        - python {{ python_min }}
       run:
-        - python >=3.8,<3.12
+        - python >={{ python_min }},<3.12
         - {{ pin_subpackage('pycytominer', exact=True) }}
         - cytominer_database >=0.3.5
     test:
       requires:
         - pip
+        - python {{ python_min }}
       imports:
         - pycytominer
         - cytominer_database
@@ -68,13 +70,15 @@ outputs:
       host:
         - fire >=0.5.0
       run:
-        - python >=3.8,<3.12
+        - python >={{ python_min }},<3.12
         - {{ pin_subpackage('pycytominer', exact=True) }}
         - fsspec >=2023.1.0
         - s3fs >=2023.4.0
         - boto3 >=1.26.79
         - fire >=0.5.0
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - pycytominer.cyto_utils.cell_locations
 

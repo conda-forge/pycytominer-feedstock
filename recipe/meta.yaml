@@ -19,7 +19,7 @@ requirements:
     - pip
     - setuptools
     - poetry
-    - poetry-dynamic-versioning >= 1.6.0
+    - poetry-dynamic-versioning >=1.6.0
   run:
     - python >={{ python_min }},<3.12
     - numpy >=1.16.5

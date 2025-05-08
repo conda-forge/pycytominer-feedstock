@@ -1,5 +1,6 @@
 {% set name = "pycytominer" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
-  sha256: f4a1542ef1b45a640f28671d3e258f80b5320b8a3d0763da72d9176f918b9a27
+  sha256: ea71a7897d69a83bd71db19b5de9c1a06792c56f9e9267b36776f34d4907f26f
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -21,7 +22,7 @@ requirements:
     - poetry
     - poetry-dynamic-versioning >=1.6.0
   run:
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }}
     - numpy >=1.16.5
     - scipy >=1.5
     - pandas >=1.2.0
@@ -51,7 +52,7 @@ outputs:
       host:
         - python {{ python_min }}
       run:
-        - python >={{ python_min }},<3.12
+        - python >={{ python_min }}
         - {{ pin_subpackage('pycytominer', exact=True) }}
         - cytominer_database >=0.3.5
     test:
@@ -71,7 +72,7 @@ outputs:
       host:
         - fire >=0.5.0
       run:
-        - python >={{ python_min }},<3.12
+        - python >={{ python_min }}
         - {{ pin_subpackage('pycytominer', exact=True) }}
         - fsspec >=2023.1.0
         - s3fs >=2023.4.0

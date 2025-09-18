@@ -12,7 +12,6 @@ source:
   sha256: 7ae607ea668629940863e91db7649b0f0e641a586b599e21c3882632d7fbca6c
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -65,8 +64,6 @@ outputs:
 
   - name: pycytominer.collate
     version: {{ version }}
-    build:
-      noarch: python
     requirements:
       host:
         - python >={{ python_min }},<{{ python_max }}
@@ -87,8 +84,6 @@ outputs:
 
   - name: pycytominer.cell-locations
     version: {{ version }}
-    build:
-      noarch: python
     requirements:
       host:
         - python >={{ python_min }},<{{ python_max }}
@@ -108,8 +103,6 @@ outputs:
   # Optional: anndata extra
   - name: pycytominer.anndata
     version: {{ version }}
-    build:
-      noarch: python
     requirements:
       host:
         - python >={{ python_min }},<{{ python_max }}

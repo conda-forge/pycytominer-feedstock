@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >= {{ python_min }},< {{ python_max }}
+    - python >={{ python_min }},<{{ python_max }}
     - pip
     - poetry-core >=1.7
     - poetry-dynamic-versioning >=1.1
   run:
-    - python >= {{ python_min }},< {{ python_max }}
+    - python >={{ python_min }},<{{ python_max }}
     - numpy >=1.16.5
     - scipy >=1.5
     - scipy >1.13.1
@@ -35,7 +35,7 @@ requirements:
 test:
   requires:
     - pip
-    - python >= {{ python_min }},< {{ python_max }}
+    - python >={{ python_min }},<{{ python_max }}
   imports:
     - pycytominer
   commands:
@@ -46,7 +46,7 @@ outputs:
     version: {{ version }}
     requirements:
       run:
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
         - numpy >=1.16.5
         - scipy >=1.5
         - scipy >1.13.1
@@ -57,7 +57,7 @@ outputs:
     test:
       requires:
         - pip
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
       imports:
         - pycytominer
       commands:
@@ -69,15 +69,15 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
       run:
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
         - {{ pin_subpackage('pycytominer', exact=True) }}
         - cytominer-database >=0.3.4
     test:
       requires:
         - pip
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
       imports:
         - pycytominer
         - cytominer_database
@@ -90,9 +90,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
       run:
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
         - {{ pin_subpackage('pycytominer', exact=True) }}
         - fsspec >=2023.1.0
         - s3fs >=2023.4.0
@@ -100,7 +100,7 @@ outputs:
         - fire >=0.5.0
     test:
       requires:
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
       imports:
         - pycytominer.cyto_utils.cell_locations
 
@@ -111,9 +111,9 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
       run:
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
         - {{ pin_subpackage('pycytominer', exact=True) }}
         - anndata <0.12.2
         - anndata >=0.12.2
@@ -121,7 +121,7 @@ outputs:
         - zarr >=3.1.1
     test:
       requires:
-        - python >= {{ python_min }},< {{ python_max }}
+        - python >={{ python_min }},<{{ python_max }}
       imports:
         - anndata
         - zarr

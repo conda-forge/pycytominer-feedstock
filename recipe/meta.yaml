@@ -1,7 +1,7 @@
 {% set name = "pycytominer" %}
 {% set version = "1.3.0" %}
 {% set python_min = "3.9" %}
-{% set python_max = "3.14" %}  # exclusive upper bound
+{% set python_max = "3.14" %}
 
 package:
   name: {{ name|lower }}

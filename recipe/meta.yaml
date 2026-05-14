@@ -64,28 +64,6 @@ outputs:
       commands:
         - pip check
 
-  - name: pycytominer.collate
-    version: {{ version }}
-    requirements:
-      host:
-        - python >={{ python_min }},<{{ python_max }}
-      run:
-        - python >={{ python_min }},<{{ python_max }}
-        - {{ pin_subpackage('pycytominer', exact=True) }}
-        - cytominer_database ==0.3.4
-        - backports.tempfile
-        - csvkit >=1.0.2,<2
-        - setuptools >=65,<70
-    test:
-      requires:
-        - pip
-        - python >={{ python_min }},<{{ python_max }}
-      imports:
-        - pycytominer
-        - cytominer_database
-      commands:
-        - pip check
-
   - name: pycytominer.cell-locations
     version: {{ version }}
     requirements:

@@ -19,8 +19,8 @@ requirements:
   host:
     - python >={{ python_min }},<{{ python_max }}
     - pip
-    - setuptools >=80
-    - setuptools-scm >=8
+    - poetry-core >=1.7
+    - poetry-dynamic-versioning >=1.1
   run:
     - python >={{ python_min }},<{{ python_max }}
     - numpy >=1.16.5

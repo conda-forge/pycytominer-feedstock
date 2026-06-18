@@ -1,5 +1,5 @@
 {% set name = "pycytominer" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 {% set python_min = "3.10" %}
 {% set python_max = "3.15" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
-  sha256: a6ee972a9d2f1e579d0df377bff876967fad73748b4a498d73c5edbc54e2374d
+  sha256: 9e497df7b1132c6d2a69e2da2db09e838a7674e0b720e519eb6303780889c80a
 
 build:
   number: 0

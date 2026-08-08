@@ -1,7 +1,6 @@
 {% set name = "pycytominer" %}
-{% set version = "1.6.1" %}
-{% set python_min = "3.10" %}
-{% set python_max = "3.15" %}
+{% set version = "1.7.0" %}
+{% set python_max = "3.14" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
-  sha256: 9e497df7b1132c6d2a69e2da2db09e838a7674e0b720e519eb6303780889c80a
+  sha256: f7cbd814dac4887b8c1ed5829b6f8670f27b6e26ac5e4f5c5d0819eabcc51766
 
 build:
   number: 0
@@ -30,6 +29,7 @@ requirements:
     - scikit-learn >=0.21.2
     - sqlalchemy >=1.3.6,<3
     - pyarrow >=8.0.0
+    - clevercsv >=0.8.5,<0.9
     - fire >=0.5
     - pyyaml >=6
 
@@ -55,6 +55,7 @@ outputs:
         - scikit-learn >=0.21.2
         - sqlalchemy >=1.3.6,<3
         - pyarrow >=8.0.0
+        - clevercsv >=0.8.5,<0.9
         - fire >=0.5
         - pyyaml >=6
     test:

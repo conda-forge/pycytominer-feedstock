@@ -1,5 +1,5 @@
 {% set name = "pycytominer" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 {% set python_max = "3.14" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
-  sha256: f7cbd814dac4887b8c1ed5829b6f8670f27b6e26ac5e4f5c5d0819eabcc51766
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pycytominer-{{ version }}.tar.gz
+  sha256: b5e8e2d89cc755f871e2b3cd45b3454d74802c9c07603dd47f77ed8e6b1399c4
 
 build:
   number: 0
